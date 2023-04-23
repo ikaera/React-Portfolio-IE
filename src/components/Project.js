@@ -1,5 +1,3 @@
-import React, { useS } from 'react';
-import React, { useState } from 'react';
 import React, { useState } from 'react';
 
 function Project() {
