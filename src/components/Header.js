@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import React, { useState } from 'react';
+import Navigation from './Navigation';
 
 function Header() {
-  return <h1> Header </h1>;
+  return (
+    <div>
+      <h1> Header </h1>
+      <Navigation />
+    </div>
+  );
 }
 
 export default Header;
