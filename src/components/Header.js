@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from './Navigation';
 
-function Header() {
+function Header(props) {
   return (
     <div>
       <h1> Header </h1>

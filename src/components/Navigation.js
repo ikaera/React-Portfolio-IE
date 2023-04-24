@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Navigation() {
+function Navigation(props) {
   return <h1> Navigation </h1>;
 }
 

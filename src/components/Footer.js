@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Footer() {
+function Footer(props) {
   return <h1> Footer </h1>;
 }
 
