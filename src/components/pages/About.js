@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div>
       <h1>About Me</h1>
-      <p class="par-about-me">
+      <p className="par-about-me">
         <q>
           {' '}
           <em>

@@ -1,0 +1,14 @@
+.footer {
+  background-color: #07135c;
+  height: 100px;
+  display: flex;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  letter-spacing: 0.5rem;
+}
+
+.copyright {
+  letter-spacing: 0.1rem;
+}
