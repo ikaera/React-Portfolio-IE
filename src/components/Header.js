@@ -4,8 +4,8 @@ import classes from './Header.module.css';
 
 function Header(props) {
   return (
-    <div>
-      <h1> Header </h1>
+    <div className="header">
+      <h1 className="header"> Irakli Eradze </h1>
       <Navigation />
     </div>
   );
