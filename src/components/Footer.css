@@ -12,3 +12,26 @@
 .copyright {
   letter-spacing: 0.1rem;
 }
+
+.footer-ul {
+  /* position: absolute;
+  bottom: 20px; */
+  /* width: 100%; */
+  display: inline-flex;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-anchor {
+  padding: 0px 7px;
+  display: inline-flex;
+  font-size: 25px;
+  line-height: 25px;
+  color: #8d8d8e;
+}
+
+.anchor-icon:hover {
+  color: #ffd400;
+}
