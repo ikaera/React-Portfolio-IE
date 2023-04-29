@@ -1,26 +1,32 @@
 .form {
   margin: 20px;
+  width: 100%;
 }
 
 .form input {
-  display: block;
+  display: inline-block;
   margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
 }
 
-/* .contact-form {
+.contact-textarea {
   width: 100%;
-  margin-top: 22px;
+  border: 0;
+  background: #115173;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 150px;
 }
 
-.contact-li {
-  /* animation: fadeInUp 2s 2s;
-  animation-fill-mode: forwards;
+/* .contact-li {
   list-style: none;
   margin-bottom: 10px;
-  opacity: 0;
-  overflow: hidden;
+  /* opacity: 0; */
+/* overflow: hidden; 
   display: block;
   clear: both;
   position: relative;
@@ -49,18 +55,6 @@
   padding: 0 20px;
 }
 
-.contact-textarea {
-  width: 100%;
-  border: 0;
-  background: #115173;
-  height: 50px;
-  font-size: 16px;
-  color: #fff;
-  padding: 20px;
-  box-sizing: border-box;
-  min-height: 150px;
-}
-
 .contact-flat-button {
   color: #ffd700;
   font-size: 11px;
@@ -75,4 +69,23 @@
   float: right;
   text-align: center;
   margin-right: 10px;
+}
+
+.contact-textarea {
+  width: 100%;
+  border: 0;
+  background: #115173;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 150px;
 } */
+
+/* .contact-form {
+  width: 100%;
+  margin-top: 22px;
+}
+
+ */
