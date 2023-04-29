@@ -5,6 +5,11 @@ export default function About() {
     <div>
       <h1>About Me</h1>
       <p className="par-about-me">
+        Full Stack Web Developer with a background in Economics and Accounting.
+        Effective at combining computational thinking, pseudocoding and problem
+        solving to develop user-friendly applications. Known for attention to
+        detail no matter the complexity of the project and having a Growth
+        Mindset.
         <q>
           {' '}
           <em>

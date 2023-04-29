@@ -26,10 +26,10 @@ function Project(props) {
         <div className="project card" key={project.title}>
           <h3 className="card-title">{project.title}</h3>
           <img className="card-image" src={project.image}></img>
-          <a className="card-link" href={project.gitHub}>
+          <a className="card-link" href={project.gitHub} target="_blank">
             GitHub
           </a>
-          <a className="card-link" href={project.diployedApp}>
+          <a className="card-link" href={project.diployedApp} target="_blank">
             Live App
           </a>
         </div>
