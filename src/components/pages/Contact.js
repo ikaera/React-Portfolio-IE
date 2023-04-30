@@ -1,6 +1,8 @@
-import React, { useInsertionEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+
+//  import EmailJS
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 // import AnimatedLetters from '../AnimatedLetters';
@@ -10,14 +12,55 @@ import { checkPassword, validateEmail } from '../../utils/helper';
 
 export default function Contact() {
   // const [letter, setLetter] = useState();
-  // const form = useRef();
 
+  // Implimenting EmailJS in React
+  const form = useRef();
+  const sendEmail = e => {
+    // e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_pyc4693',
+        'template_6xidmwh',
+        form.current,
+        // {
+        //   from_name: name,
+        //   from_email: email,
+        //   message: message,
+        //   subject: subject,
+        // },
+        'MV5a-rndSv5x-CHHQ',
+      )
+      .then(
+        result => {
+          console.log('SUCCESS!', result.status, result.text);
+          setSuccessMessage('Email was sent!');
+          // window.location.reload(false);
+          // alert(`Hello ${name}`);
+
+          // If everything goes according to plan, we want to clear out the input after a successful registration.
+          setName('');
+          setSubject('');
+          setEmail('');
+          setMessage('');
+        },
+        error => {
+          console.log(
+            'FAILED to send the message, please try again',
+            error.text,
+          );
+          setErrorMessage('FAILED to send the message.');
+        },
+      );
+  };
   // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleInputChange = e => {
     // Getting the value and name of the input which triggered the change
@@ -30,9 +73,9 @@ export default function Contact() {
       setEmail(inputValue);
     } else if (inputType === 'name') {
       setName(inputValue);
-    } else {
-      setPassword(inputValue);
-    }
+    } else if (inputType === 'subject') {
+      setSubject(inputValue);
+    } else setMessage(inputValue);
   };
 
   const handleFormSubmit = e => {
@@ -50,12 +93,7 @@ export default function Contact() {
     //   setErrorMessage(`Choose a more secure password for the account: ${name}`);
     //   return;
     // }
-    alert(`Hello ${name}`);
-
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setName('');
-    setPassword('');
-    setEmail('');
+    sendEmail();
   };
 
   return (
@@ -69,8 +107,18 @@ export default function Contact() {
           <p>
             I am interested in an entry level opportunity in Web Development.
           </p>
+          {successMessage && (
+            <div>
+              <p className="success-text">{successMessage}</p>
+            </div>
+          )}
           <div className="contact-form">
-            <form className="form">
+            <form
+              id="my-form"
+              className="form"
+              ref={form}
+              onSubmit={handleFormSubmit}
+            >
               <input
                 className="contact-half"
                 value={name}
@@ -93,13 +141,17 @@ export default function Contact() {
               <input
                 className="contact-li"
                 placeholder="Subject"
+                value={subject}
+                onChange={handleInputChange}
                 type="text"
                 name="subject"
                 required
               />
               <textarea
                 className="contact-textarea"
+                value={message}
                 placeholder="Message"
+                onChange={handleInputChange}
                 name="message"
                 required
               ></textarea>
@@ -118,7 +170,7 @@ export default function Contact() {
                 type="submit"
                 className="contact-flat-button"
                 value="SEND"
-                onClick={handleFormSubmit}
+                // onClick={handleFormSubmit}
               />
             </form>
             {errorMessage && (

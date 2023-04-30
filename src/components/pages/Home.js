@@ -10,7 +10,7 @@ export default function Home() {
       </div>
       <div className="text-box">
         <h1 className="heading-primary">
-          <h1> Hello, this is </h1>
+          Hello, this is
           <span className="heading-primary-main"> Irakli Eradze </span>
           <a className="heading-primary-sub" href="#work">
             Web Developer
