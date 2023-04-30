@@ -68,8 +68,10 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ![alt text](assets/images/screenshot.png)
     ``` -->
 
-- ## The URL of the functional, deployed application:
-- ## The URL of the GitHub repository, with a unique name and a README that describes the project:
+- The URL of the functional, deployed application:
+  -
+- The URL of the GitHub repository, with a unique name and a README that describes the project:
+  - https://github.com/ikaera/React-Portfolio-IE
 
 ## Credits
 
