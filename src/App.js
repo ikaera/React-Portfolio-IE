@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="page">
       {/* <h1>Irakli Eradze</h1> */}
       <Navigation setCurrentPage={setCurrentPage} />
       {displayPage()}

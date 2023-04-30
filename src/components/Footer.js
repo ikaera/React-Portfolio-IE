@@ -54,6 +54,20 @@ function Footer(props) {
             />
           </a>
         </li>
+        <li>
+          <a
+            href="mailto:IrakliEradzeG@gmail.com"
+            target="_blank"
+            rel="nonreferrer"
+            className="footer-anchor"
+          >
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              color="#6d6d6e"
+              className="anchor-icon"
+            />
+          </a>
+        </li>
       </ul>
     </div>
   );

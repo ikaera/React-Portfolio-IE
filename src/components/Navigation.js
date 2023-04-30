@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navigation.css';
-
+import resumePDF from '../assets/Resume-Irakli-E.pdf';
 const PDF_Resume =
   'https://docs.google.com/document/d/1677J2jOdyiuQ-0EPw6GkmcUUQn2_Ep26BrRXIZv2amk/edit#heading=h.ptzf6k1s5l03';
 
@@ -32,10 +32,12 @@ function Navigation({ setCurrentPage }) {
         </li>
         <li className="nav-item">
           <a
-            href="#Resume"
+            href={resumePDF}
+            download="IrakliEradze.PDF"
+            // target="_blank"
             // href="https://docs.google.com/document/d/1677J2jOdyiuQ-0EPw6GkmcUUQn2_Ep26BrRXIZv2amk/edit#heading=h.ptzf6k1s5l03"
             // download="Resume-Irakli-Eradze"
-            onClick={() => downloadFile(PDF_Resume)}
+            // onClick={() => downloadFile(PDF_Resume)}
           >
             Download Resume
           </a>

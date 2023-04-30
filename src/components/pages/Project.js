@@ -22,18 +22,31 @@ function Project(props) {
   return (
     <div className="projects">
       <h1> Projects </h1>
-      {projects.map(project => (
-        <div className="project card" key={project.title}>
-          <h3 className="card-title">{project.title}</h3>
-          <img className="card-image" src={project.image}></img>
-          <a className="card-link" href={project.gitHub} target="_blank">
-            GitHub
-          </a>
-          <a className="card-link" href={project.diployedApp} target="_blank">
-            Live App
-          </a>
-        </div>
-      ))}
+      <div className="project-cards">
+        {projects.map(project => (
+          <div
+            className="project card"
+            style={{ width: '60rem' }}
+            key={project.title}
+          >
+            <img className="card-img-top" src={project.image}></img>
+            <div className="card-body">
+              <h3 className="card-title">{project.title}</h3>
+
+              <a className="card-link" href={project.gitHub} target="_blank">
+                GitHub
+              </a>
+              <a
+                className="card-link"
+                href={project.diployedApp}
+                target="_blank"
+              >
+                Live App
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
